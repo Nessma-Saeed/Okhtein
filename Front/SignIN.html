@@ -1,0 +1,133 @@
+<!doctype html> 
+<html>
+    <head> 
+        <title>OKHTEIN - Sign In</title>
+        <style>
+            .TOP_NAV {
+                background-color: black;
+                overflow: hidden;
+            }
+            .TOP_NAV a {
+                float: left;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+            .TOP_NAV a:hover {
+                background-color: blanchedalmond;
+                color: brown;
+            }
+            .TOP_NAV a.active {
+                background-color: blanchedalmond;
+                color: black;
+            }
+            body {
+                background-color: beige;
+                font-family: Arial, sans-serif;
+            }
+            a:hover {
+                font-weight: bold;
+            }
+            .signin-container {
+                width: 400px;
+                margin: 50px auto;
+                padding: 30px;
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+            .signin-container h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #333;
+            }
+            .form-group {
+                margin-bottom: 15px;
+            }
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+            .form-group input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            .signin-btn {
+                width: 100%;
+                padding: 12px;
+                background-color: black;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .signin-btn:hover {
+                background-color: #333;
+            }
+            .signup-link {
+                text-align: center;
+                margin-top: 15px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="TOP_NAV">
+            <a href="Home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Products.html">Products</a>
+            <a class="active" href="signin.html">Sign In</a>
+            <input type="text" placeholder="Search" style="height: 30px; position: absolute; top: 14px; right: 16px;"><br><br>
+        </div>
+
+        <div style="background-color: black; height: 70px; padding-top: 30px;">
+            <marquee><img src="logo-white.png"></marquee>
+        </div>
+        <hr><br>
+
+        <div class="signin-container">
+            <h2>Sign In to Your Account</h2>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit" class="signin-btn">SIGN IN</button>
+
+                <div class="signup-link">
+                    Don't have an account? <a href="signup.html">Sign up</a>
+                </div>
+            </form>
+        </div>
+
+        <hr>
+
+        <footer>
+            <div style="display: inline-block;">
+                <p>Newsletter</p>
+                <input type="email" placeholder="Your Email" style="height: 30px;width: 200px;">
+            </div>
+
+            <div style="display: inline-block; float:right; margin-right: 16px;">
+                <p>
+                    <a href="https://www.instagram.com/okhtein/" style="text-decoration: none; color: black; font-size: 18px;">Instagram</a> <br>
+                    <a href="https://web.facebook.com/okhtein/?_rdc=1&_rdr" style="text-decoration: none; color: black; font-size: 18px;">Facebook</a><br>
+                    <a href="https://www.pinterest.com/okhtein/" style="text-decoration: none; color: black; font-size: 18px;">Pinterest</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
