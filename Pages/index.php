@@ -16,6 +16,7 @@ $myObj = new \App\DB();
     <link rel="stylesheet" href="../Front/">
 </head>
 <body>
+    <!-- To access navbar once,,, .->"concatenation",,, Full path -->
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/IA/pages/Layout/Navbar.php' ?>
 <h1>Welcome Back, <?php echo $_SESSION['Username'] ?></h1>
 </body>

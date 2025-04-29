@@ -9,7 +9,7 @@ $authObj->signUp();
 <!doctype html> 
 <html>
     <head> 
-        <title>OKHTEIN - Sign Up</title>
+        <title>OKHTEIN-SignUp</title>
         <style>
             .TOP_NAV {
                 background-color: black;
@@ -102,7 +102,6 @@ $authObj->signUp();
             <a href="about.html">About</a>
             <a href="Products.html">Products</a>
             <a class="active" href="signup.html">Sign Up</a>
-            <input type="text" placeholder="Search" style="height: 30px; position: absolute; top: 14px; right: 16px;"><br><br>
         </div>
 
         <div style="background-color: black; height: 70px; padding-top: 30px;">
@@ -136,7 +135,7 @@ $authObj->signUp();
                 <button type="submit" name="signUpBtn" class="signup-btn">SIGN UP</button>
                 
                 <div class="login-link">
-                    Already have an account? <a href="login.html">Log in</a>
+                    Already have an account? <a href="SignIn.php">Log in</a>
                     <br>
                 </div>
 
@@ -150,7 +149,7 @@ $authObj->signUp();
                 <input type="email" placeholder="Your Email" style="height: 30px;width: 200px;">
             </div>
             
-            <div style="display: inline-block; float: right; margin-right: 16px;">
+            <div style="display: inline-block; float:right; margin-right: 16px;">
                 <p>
                     <a href="https://www.instagram.com/okhtein/" style="text-decoration: none; color: black;font-size: 18px;">Instagram</a> <br>
                     <a href="https://web.facebook.com/okhtein/?_rdc=1&_rdr" style="text-decoration: none; color: black; font-size: 18px;">Facebook</a><br>

@@ -1,9 +1,7 @@
 <?php
 
 namespace App;
-
 use mysqli;
-
 class DB
 {
     private string $hostname = "localhost";
@@ -13,7 +11,9 @@ class DB
     public mysqli $Connection;
 
     public function __construct() //init  // $this-> self in python
+    /*called auto. when making an obj. from DB*/
     {
+        // Parameters: hostname username password database بعرفهم فوق 
         $this->Connection = new mysqli($this->hostname, $this->username, $this->password, $this->database);
     }
 
