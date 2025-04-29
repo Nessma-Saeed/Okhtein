@@ -98,9 +98,9 @@ $authObj->signUp();
     
     <body>
         <div class="TOP_NAV">
-            <a href="Home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="Products.html">Products</a>
+            <a href="../Front/Home.html">Home</a>
+            <!-- <a href="about.html">About</a>
+            <a href="Products.html">Products</a> -->
             <a class="active" href="signup.html">Sign Up</a>
         </div>
 

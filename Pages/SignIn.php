@@ -11,7 +11,6 @@ $alertObject->alertAfterSignUp();
 
 $authObject = new \App\Authenticate();
 $authObject->signIn();
-
 // $authObject->redirectIfAuth();
 
 ?>
@@ -30,11 +29,11 @@ $authObject->signIn();
 <body>
 
 <div class="TOP_NAV">
-            <a href="Home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="Products.html">Products</a>
+            <a href="../Front/Home.html">Home</a>
+            <!-- <a href="about.html">About</a>
+            <a href="Products.html">Products</a> -->
             <a class="active" href="signin.html">Sign In</a>
-            <input type="text" placeholder="Search" style="height: 30px; position: absolute; top: 14px; right: 16px;"><br><br>
+            <!-- <input type="text" placeholder="Search" style="height: 30px; position: absolute; top: 14px; right: 16px;"><br><br> -->
         </div>
 
         <div style="background-color: black; height: 70px; padding-top: 30px;">

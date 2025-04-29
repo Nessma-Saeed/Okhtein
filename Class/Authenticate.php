@@ -4,6 +4,31 @@ namespace App;
 
 class Authenticate
 {
+
+    public function isAuth()
+    //check the key you have in session
+    {
+        return isset($_SESSION['userID']);
+    }
+
+    //2 methods depend on isAuth:
+    public function redirectIfNotAuth()
+    {
+        if (!$this->isAuth())
+            header('location: SignIn.php');
+    }
+
+    public function redirectIfAuth()
+    {
+        // Used in page SignIn & SignUp
+        if ($this->isAuth())
+            header('location: index.php');
+    }
+
+
+
+
+
     public function signUp()
     {
        //Sign Up
@@ -80,6 +105,15 @@ class Authenticate
                     Alert::PrintMessage('Email is not valid', 'Danger');
                 }
             }
+        }
+    }
+
+    public function logOut()
+    {
+        if (isset($_GET['logout'])) {
+            session_unset();
+            session_destroy();
+            header("location: SignIn.php");
         }
     }
 }
