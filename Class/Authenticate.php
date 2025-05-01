@@ -22,7 +22,7 @@ class Authenticate
     {
         // Used in page SignIn & SignUp
         if ($this->isAuth())
-            header('location: index.php');
+            header('location: Products.php');
     }
 
 
@@ -86,7 +86,7 @@ class Authenticate
                 //هترجع obj من نوع mysqli_result
                 $resultObject = $queryStmtObject->get_result();
                 //فعلا في email موجود
-                if ($resultObject-> num_rows == 1) {
+                if ($resultObject -> num_rows == 1) {
                     $rowArr = $resultObject->fetch_assoc();
                     //Fetch the next row of a result set as an associative array 
                     if (password_verify($password, $rowArr["Password"])) {
@@ -113,6 +113,7 @@ class Authenticate
         if (isset($_GET['logout'])) {
             session_unset();
             session_destroy();
+            // delete key of the session
             header("location: SignIn.php");
         }
     }

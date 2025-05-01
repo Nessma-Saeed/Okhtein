@@ -23,7 +23,7 @@ $authObject->logout();
 </head>
 <body>
     <!-- To access navbar once,,, .->"concatenation",,, Full path -->
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/IA/pages/Layout/Navbar.php' ?>
+
 <h1>Welcome Back, <?php echo $_SESSION['userName'] ?></h1>
 </body>
 </html>

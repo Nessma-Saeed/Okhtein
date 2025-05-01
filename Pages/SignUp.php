@@ -4,6 +4,7 @@ use App\Authenticate;
 require_once("../vendor/autoload.php");
 $authObj= new Authenticate;
 $authObj->signUp(); 
+// $authObj->redirectIfAuth();
 
 ?>
 <!doctype html> 
@@ -97,17 +98,8 @@ $authObj->signUp();
     </head>
     
     <body>
-        <div class="TOP_NAV">
-            <a href="../Front/Home.html">Home</a>
-            <!-- <a href="about.html">About</a>
-            <a href="Products.html">Products</a> -->
-            <a class="active" href="signup.html">Sign Up</a>
-        </div>
-
-        <div style="background-color: black; height: 70px; padding-top: 30px;">
-            <marquee><img src="logo-white.png"></marquee>
-        </div>
-        <hr><br>
+   
+    <?php require($_SERVER['DOCUMENT_ROOT'] . '/PR_IA/Pages/Layout/Navbar.php')?> 
 
         <div class="signup-container">
             <h2>Create Your Account</h2>
