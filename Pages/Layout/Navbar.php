@@ -61,6 +61,7 @@ $authObject->logout();
                 <a class="nav-link" href="Product_Create.php">Product_Create</a>
             </li>
             <li>
+                  <!--anonymous Object-->
             <?php if ((new \App\Authenticate())->isAuth()): ?>
                 <li class="nav-item ">
                     <a style="color: red" class="nav-link" href="index.php?logout=1">LogOut</a>

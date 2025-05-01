@@ -4,7 +4,7 @@ use App\Authenticate;
 require_once("../vendor/autoload.php");
 $authObj= new Authenticate;
 $authObj->signUp(); 
-// $authObj->redirectIfAuth();
+$authObj->redirectIfAuth();
 
 ?>
 <!doctype html> 

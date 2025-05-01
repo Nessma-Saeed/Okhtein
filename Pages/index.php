@@ -23,7 +23,7 @@ $authObject->logout();
 </head>
 <body>
     <!-- To access navbar once,,, .->"concatenation",,, Full path -->
-
+<!--Depend on each user -->
 <h1>Welcome Back, <?php echo $_SESSION['userName'] ?></h1>
 </body>
 </html>
