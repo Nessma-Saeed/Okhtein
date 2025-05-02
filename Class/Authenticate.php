@@ -48,7 +48,7 @@ class Authenticate
             $queryStatus=$queryObj->execute();
             if($queryStatus){
                  header('Location:SignIn.php?doneSignUp=1');
-                // echo '<div style="width: 100%; background-color: #B4EBE6; color: #80CBC4; text-align: center; padding: 15px; font-weight: bold;">Your account has been created Successfully!</div>'; 
+                
             }
             else{
             \App\Alert::PrintMessage("Confirm Password not matched", 'Danger');}

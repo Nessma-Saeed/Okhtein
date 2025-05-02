@@ -1,7 +1,9 @@
 <?php
 
 use App\Authenticate;
+//import
 require_once("../vendor/autoload.php");
+
 $authObj= new Authenticate;
 $authObj->signUp(); 
 $authObj->redirectIfAuth();
