@@ -58,11 +58,11 @@ $collections = [
         }
 
         th {
-            background-color: #00796b;
-            color: white;
+            background-color: bisque ;
+            color: black;
         }
 
-        img {
+        #timg {
             width: 100px;
             height: 100px;
             object-fit: cover;
@@ -81,16 +81,32 @@ $collections = [
         }
 
         .edit-btn {
-            background-color: #ffc107;
+            background-color: bisque ;
+            color: black;
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
         .delete-btn {
-            background-color: #e53935;
+            background-color: brown;
         }
 
         .btn:hover {
             opacity: 0.9;
         }
+        h2{font-weight: 400;
+               text-align: center;}
+            .newsletter h3{
+                text-align: left;
+                font-weight: normal;
+            }
+            p:hover{
+                font-weight:bold;
+                color: brown;
+            }
+            a:hover{
+                font-weight:bold;
+            }    
     </style>
 </head>
 <?php require($_SERVER['DOCUMENT_ROOT'] . '/PR_IA/Pages/Layout/Navbar.php'); ?>
@@ -130,13 +146,13 @@ $collections = [
             <?php while ($row = $products->fetch_assoc()): ?>
                 <tr>
                     <td><?php echo $i++; ?></td>
-                    <td><img src="<?php echo htmlspecialchars($row['image']); ?>" alt="Product Image"></td>
+                    <td><img id=timg src="<?php echo htmlspecialchars($row['image']); ?>" alt="Product Image"></td>
                     <td><?php echo htmlspecialchars($row['Name']); ?></td>
                     <td>$<?php echo htmlspecialchars($row['price']); ?></td>
                     <td><?php echo htmlspecialchars($row['collection']); ?></td>
                     <td>
                         <!-- Proper edit and delete buttons -->
-                        <a class="btn edit-btn" href="/Pages/Product_Update.php echo urlencode($row['id']); ?>">Edit</a>
+                        <a class="btn edit-btn" href="/Pages/Product_Update.php echo urlencode($row['id']); ?>">Edit</a><br><br>
                         
                        <a class="btn delete-btn" href="/Pages/Product_Update.php echo urlencode($row['id']); ?>">Delete</a>
                         

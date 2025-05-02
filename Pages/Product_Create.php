@@ -30,7 +30,8 @@ $authObj->redirectIfNotAuth();
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            width: 400px;
+            width: 450px;
+            position: relative;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -41,21 +42,27 @@ $authObj->redirectIfNotAuth();
         input[type="text"],
         input[type="number"],
         input[type="file"] {
-            width: 100%;
+            width: 90%;
             padding: 8px;
-            margin: 5px 0 15px;
+            margin: 5px 4px 10px;
         }
 
         button {
             padding: 10px 20px;
-            background-color: teal;
+            background-color: black;
             color: white;
             border: none;
             cursor: pointer;
+            margin: 5px 4px 15px;
+            width: 40%;
         }
 
         button:hover {
-            background-color: darkcyan;
+            background-color: brown;
+        }
+        #productCollection{
+            height: 30px; width:90%;
+            margin: 5px 4px 15px;
         }
     </style>
 </head>
@@ -79,7 +86,7 @@ $authObj->redirectIfNotAuth();
                 <label for="productIamge">Product Image:</label>
                 <input type="file" id="productIamge" name="productIamge" accept="image/*" required>
 
-                <label for="productCollection">Collection Name:</label>
+                <label for="productCollection">Collection Name:</label><br>
                 <select id="productCollection" name="productCollection" required>
                                 <option value="">-- Select Collection --</option>
                                 <option value="TOP PICKS">TOP PICKS</option>
@@ -88,8 +95,8 @@ $authObj->redirectIfNotAuth();
                                 <option value="GOLDEN COLLECTION">GOLDEN COLLECTION</option>
                                 <option value="JEWELRY">JEWELRY</option>
                                  </select>
-
-                <button type="submit" name="addNewProductBtn">Add Product</button>
+                <br>
+                <button type="submit" name="addNewProductBtn" >Add Product</button>
             </fieldset>
         </form>
     </div>
