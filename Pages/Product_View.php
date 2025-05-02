@@ -115,19 +115,7 @@ $collections = [
 
 <h1>Product List</h1>
 
-<div class="filter">
-    <form method="GET">
-        <label for="collection">Filter by Collection:</label>
-        <select name="collection" id="collection" onchange="this.form.submit()">
-            <option value="">All Collections</option>
-            <?php foreach ($collections as $collection): ?>
-                <option value="<?php echo htmlspecialchars($collection); ?>" <?php if ($collection === $collectionFilter) echo 'selected'; ?>>
-                    <?php echo htmlspecialchars($collection); ?>
-                </option>
-            <?php endforeach; ?>
-        </select>
-    </form>
-</div>
+<
 
 <table>
     <thead>

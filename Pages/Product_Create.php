@@ -10,6 +10,7 @@ $authObj->redirectIfNotAuth();
 
 //CRUD OP
 (new Product())->createNewProduct();
+
 ?>
 
 <!doctype html>

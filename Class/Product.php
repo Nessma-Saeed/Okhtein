@@ -6,11 +6,8 @@ class Product
 {
     public function createNewProduct()
     {
-        
-        if (isset($_POST['addNewProductBtn'])) {
-            if (!isset($_SESSION['userID'])) {
-                die("Unauthorized. Please log in.");
-            }
+         if (isset($_POST['addNewProductBtn'])) {
+            
             $productName = $_POST['Productinput'];
             $productPrice = $_POST['productPrice'];
             $productCollection = $_POST['productCollection'];
@@ -25,6 +22,7 @@ class Product
             if (!is_dir($uploadDir)) {
                 mkdir($uploadDir, 0777, true);
             }
+            
                     //add images to project folder
             if (move_uploaded_file($imageTmp, $imagePath)) {
                 // Insert product into the database
@@ -32,8 +30,8 @@ class Product
                 $myDBObject = new \App\DB();
                 $queryObject = $myDBObject->Connection->prepare($insertStatement);
                 $queryObject->bind_param('sissi', $productName, $productPrice, $imagePath, $productCollection, $_SESSION['userID']);
-        
                 $CheckQuery=$queryObject->execute();
+
                if($CheckQuery) \App\Alert::PrintMessage("Done inserting New Product","Normal");
                else \App\Alert::PrintMessage("Failed TO Insert Product","Danger");
         }
