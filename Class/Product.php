@@ -38,14 +38,54 @@ class Product
         }
     }
     public function getProducts() {
-        $myDBObject = new \App\DB();
+        
          //All Products
         $selectStatement = 'SELECT * FROM products';
-
+        $myDBObject = new \App\DB();
         $queryObject = $myDBObject->Connection->prepare($selectStatement);
         $queryObject->execute();
 
-        $result = $queryObject->get_result();
-        return $result;
+        
+        return $result = $queryObject->get_result(); //sqli object
     }
+
+
+    public function getProductbyID($productId) {
+        $selectStatement = 'SELECT * FROM `products` WHERE id=?';
+        $myDBObject = new \App\DB();
+        $queryObject = $myDBObject->Connection->prepare($selectStatement);
+        $queryObject->bind_param('i', $productId);
+        $queryObject->execute();
+
+        return $result = $queryObject->get_result()->fetch_assoc();//sqli object
+    }
+
+
+    public function updateProduct($productId)
+{
+    if (isset($_POST['UpdateProductBtn'])) {
+        $name = $_POST['Productinput'];
+        $price = $_POST['productPrice'];
+        $collection = $_POST['productCollection'];
+
+        // Default to existing image
+        $productData = $this->getProductbyID($productId);
+        $image = $productData['image'];
+    
+        $updateStmt = "UPDATE `products` SET `name` = ?, `price` = ?, `image` = ?, `collection` = ? WHERE `id` = ?";
+        $myDBObject = new \App\DB();
+        $stmt = $myDBObject->Connection->prepare($updateStmt);
+        $stmt->bind_param("ssssi", $name, $price, $image, $collection, $productId);
+
+        if ($stmt->execute()) {
+            header("Location: Product_View.php");
+            exit();
+        } else {
+            \App\Alert::PrintMessage("Failed to update product", "danger");
+        }
+    }
+}
+
+
+    
 }

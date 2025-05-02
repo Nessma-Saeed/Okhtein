@@ -1,4 +1,4 @@
-
+<!-- 
 
 <?php
 
@@ -164,4 +164,4 @@ $authObject->redirectIfNotAuth();
             </div>
         </footer>
     </body>
-</html>
+</html> -->

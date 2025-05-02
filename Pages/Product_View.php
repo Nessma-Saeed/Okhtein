@@ -140,9 +140,12 @@ $collections = [
                     <td><?php echo htmlspecialchars($row['collection']); ?></td>
                     <td>
                         <!-- Proper edit and delete buttons -->
-                        <a class="btn edit-btn" href="/Pages/Product_Update.php echo urlencode($row['id']); ?>">Edit</a><br><br>
+                        <a href="Product_Update.php?rowId=<?php echo $row['ID']?>">
+                        <button class="btn edit-btn text-center">Update</button>
+                         </a>
+
                         
-                       <a class="btn delete-btn" href="/Pages/Product_Update.php echo urlencode($row['id']); ?>">Delete</a>
+                        <!--<a class="btn edit-btn" href="/Pages/Product_Update.php?id=<?php echo urlencode($row['ID']); ?>">Edit</a>-->
                         
                     </td>
                 </tr>
