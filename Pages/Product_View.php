@@ -14,6 +14,7 @@ $collections = [
     "GOLDEN COLLECTION",
     "JEWELRY"
 ];
+$productObj->deleteProduct();
 ?>
 
 <!DOCTYPE html>
@@ -145,7 +146,9 @@ $collections = [
                          </a>
 
                         
-                        <!--<a class="btn edit-btn" href="/Pages/Product_Update.php?id=<?php echo urlencode($row['ID']); ?>">Edit</a>-->
+                         <a href="?deletedproduct=<?php echo $row['ID']?>">
+                        <button class="btn edit-btn text-center">Delete</button>
+                         </a>
                         
                     </td>
                 </tr>

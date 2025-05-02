@@ -85,7 +85,20 @@ class Product
         }
     }
 }
+        public function deleteProduct(){
+            if (isset($_GET['deletedproduct'])) {
 
+                $productId = $_GET['deletedproduct'];
+                $deleteStatement = 'DELETE FROM `products` WHERE id = ?';
+                $myDBObject = new \App\DB();
+                $queryStmtObject = $myDBObject->Connection->prepare($deleteStatement);
+                $queryStmtObject->bind_param('i', $productId);
+                $checkQuery = $queryStmtObject->execute();
+                if ($checkQuery)
+                    header('location: Product_View.php');
+                else
+                    Alert::PrintMessage("Failed To Delete Product", "Danger");
+            }
+     }
 
-    
 }
