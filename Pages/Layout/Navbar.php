@@ -51,9 +51,9 @@ $authObject->logout();
 <nav div class="TOP_NAV">
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item">
+           <!-- <li class="nav-item">
                 <a class="nav-link"  href="Products.php">Products</a>
-            </li>
+            </li>-->
             <li class="nav-item">
                 <a class="nav-link" href="Product_View.php">Product_View</a>
             </li>
@@ -85,7 +85,6 @@ $authObject->logout();
         </div>
         <!--navigation bar-->
     <!-- To access navbar once,,, .->"concatenation",,, Full path -->
-
 
 
 </body>

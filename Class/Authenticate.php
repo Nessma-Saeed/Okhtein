@@ -22,7 +22,7 @@ class Authenticate
     {
         // Used in page SignIn & SignUp
         if ($this->isAuth())
-            header('location: Products.php');
+            header('location: Product_View.php');
     }
 
 
